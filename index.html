@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA // KINETIC DOSSIER</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+        :root {
+            --lab-blue: #0A84FF;
+            --lab-green: #30D158;
+            --lab-orange: #FF9F0A;
+            --glass: rgba(15, 15, 18, 0.85);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: #050505;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            /* Technical grid background */
+            background-image: 
+                linear-gradient(rgba(10, 132, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(10, 132, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        .mono { font-family: 'JetBrains Mono', monospace; }
+
+        /* --- THE LAB CONTAINER --- */
+        .lab-pane {
+            background: var(--glass);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid var(--border);
+            border-radius: 4px; /* Industrial sharp edges */
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .lab-pane:hover {
+            border-color: var(--lab-blue);
+            box-shadow: 0 0 40px rgba(10, 132, 255, 0.15);
+            transform: translateY(-4px);
+        }
+
+        /* --- UI UTILITIES --- */
+        .tag-tech {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--lab-blue);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .status-dot {
+            width: 8px; height: 8px; border-radius: 50%;
+            display: inline-block; margin-right: 8px;
+        }
+
+        .h-bar { height: 2px; background: rgba(255,255,255,0.05); border-radius: 100px; overflow: hidden; }
+        .h-fill { height: 100%; background: var(--lab-blue); transition: width 2s ease-in-out; }
+
+        /* Corner Brackets */
+        .corner-tl { position: absolute; top: -1px; left: -1px; width: 15px; height: 15px; border-top: 2px solid var(--lab-blue); border-left: 2px solid var(--lab-blue); }
+        .corner-br { position: absolute; bottom: -1px; right: -1px; width: 15px; height: 15px; border-bottom: 2px solid var(--lab-blue); border-right: 2px solid var(--lab-blue); }
+
+    </style>
+</head>
+<body class="p-4 md:p-10">
+
+    <main class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6">
+
+        <section class="lab-pane col-span-12 md:col-span-8 p-10 md:p-16 flex flex-col justify-between min-h-[450px]">
+            <div class="corner-tl"></div>
+            <div>
+                <span class="tag-tech">Operational_Identity // 2026</span>
+                <h1 class="text-5xl md:text-8xl font-black tracking-tighter leading-none mb-8">
+                    QUALITY <br> ARCHITECT.
+                </h1>
+                <p class="text-xl md:text-2xl text-white/40 font-light max-w-2xl leading-relaxed">
+                    Master of Computer Applications student specializing in **bulletproof automation**. Currently architecting frameworks that bridge the gap between stability and speed.
+                </p>
+            </div>
+            <div class="flex gap-4 mt-12">
+                <div class="flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded">
+                    <span class="status-dot bg-blue-400 animate-pulse"></span>
+                    <span class="mono text-[10px] font-bold">JAVA_CORE</span>
+                </div>
+                <div class="flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-500/20 rounded">
+                    <span class="status-dot bg-green-400"></span>
+                    <span class="mono text-[10px] font-bold">SELENIUM_EXPERT</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-pane col-span-12 md:col-span-4 p-10 flex flex-col items-center justify-center text-center">
+            <span class="tag-tech">Validation_Core</span>
+            <div class="relative py-12">
+                <div class="text-[10rem] font-black leading-none text-white tracking-tighter">87</div>
+                <div class="absolute top-0 right-[-20px] text-4xl font-bold text-blue-500">%</div>
+            </div>
+            <div class="mono text-xs font-bold tracking-[0.3em] text-white/30 mb-8 uppercase">Software Testing Grade</div>
+            <div class="w-full space-y-4 text-left">
+                <div class="p-4 bg-white/5 border border-white/5 rounded">
+                    <div class="flex justify-between text-[10px] mono mb-2"><span>EVALUATION_SOURCE</span> <span class="text-blue-400">INTERNSHALA</span></div>
+                    <div class="flex justify-between text-[10px] mono"><span>DURATION</span> <span>6_WEEKS</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-pane col-span-12 p-10">
+            <div class="corner-tl"></div>
+            <span class="tag-tech mb-12">Academic_Dossier</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div class="flex gap-8 group">
+                    <div class="text-4xl font-black text-white/10 group-hover:text-blue-500 transition-colors">01</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Master of Computer Applications (MCA)</h3>
+                        <p class="text-blue-400 mono text-sm font-bold mb-4 italic">Lovely Professional University // 2024 — 2026</p>
+                        <p class="text-sm text-white/40 leading-relaxed">Focus on advanced software engineering, enterprise architecture, and automated quality assurance protocols.</p>
+                    </div>
+                </div>
+                <div class="flex gap-8 group">
+                    <div class="text-4xl font-black text-white/10 group-hover:text-blue-500 transition-colors">02</div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Bachelor of Computer Applications (BCA)</h3>
+                        <p class="text-blue-400 mono text-sm font-bold mb-4 italic">Patkar-Varde College // 2017 — 2021</p>
+                        <p class="text-sm text-white/40 leading-relaxed">Foundational training in programming logic, data structures, and object-oriented design principles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="col-span-12 md:col-span-4 lab-pane p-8 border-orange-500/30">
+            <div class="flex justify-between items-start mb-12">
+                <i data-lucide="coffee" class="text-orange-500 w-8 h-8"></i>
+                <span class="mono text-[10px] font-bold text-orange-500">MODULE_01</span>
+            </div>
+            <h4 class="text-xl font-bold mb-2">Java Masterclass 2025</h4>
+            <p class="text-xs text-white/30 mono mb-8 tracking-tighter">130+ HOURS // EXPERT LESSONS</p>
+            <p class="text-sm text-white/50 mb-8 leading-relaxed">Deep-dive into OOP, complex coding forensics, and enterprise problem-solving for job-ready development.</p>
+            <div class="h-bar"><div class="h-fill !bg-orange-500" style="width: 100%"></div></div>
+        </div>
+
+        <div class="col-span-12 md:col-span-4 lab-pane p-8 border-green-500/30">
+            <div class="flex justify-between items-start mb-12">
+                <i data-lucide="shield-check" class="text-green-500 w-8 h-8"></i>
+                <span class="mono text-[10px] font-bold text-green-500">MODULE_02</span>
+            </div>
+            <h4 class="text-xl font-bold mb-2">Selenium WebDriver</h4>
+            <p class="text-xs text-white/30 mono mb-8 tracking-tighter">BASICS TO ADVANCED // FRAMEWORKS</p>
+            <p class="text-sm text-white/50 mb-8 leading-relaxed">Designing Page Object Models, TestNG integration, and automated reporting for web ecosystems.</p>
+            <div class="h-bar"><div class="h-fill !bg-green-500" style="width: 90%"></div></div>
+        </div>
+
+        <div class="col-span-12 md:col-span-4 lab-pane p-8 border-cyan-500/30">
+            <div class="flex justify-between items-start mb-12">
+                <i data-lucide="zap" class="text-cyan-500 w-8 h-8"></i>
+                <span class="mono text-[10px] font-bold text-cyan-500">MODULE_03</span>
+            </div>
+            <h4 class="text-xl font-bold mb-2">Python Playwright</h4>
+            <p class="text-xs text-white/30 mono mb-8 tracking-tighter">ACTIVE_LEARNING // ASYNC_E2E</p>
+            <p class="text-sm text-white/50 mb-8 leading-relaxed">Currently exploring modern async automation, API testing, and robust locator strategies.</p>
+            <div class="h-bar"><div class="h-fill !bg-cyan-500" style="width: 60%"></div></div>
+        </div>
+
+        <section class="lab-pane col-span-12 md:col-span-7 p-10">
+            <span class="tag-tech mb-8">System_Sub_Logs</span>
+            <div class="space-y-6">
+                <div class="flex items-center justify-between p-4 bg-white/5 rounded group hover:bg-white/10 transition-colors">
+                    <div>
+                        <div class="font-bold text-lg">Web Development Bootcamp</div>
+                        <div class="text-[10px] mono text-white/30">UDEMY // FEB - APR 2025</div>
+                    </div>
+                    <i data-lucide="layout" class="text-white/20 group-hover:text-blue-400"></i>
+                </div>
+                <div class="flex items-center justify-between p-4 bg-white/5 rounded group hover:bg-white/10 transition-colors">
+                    <div>
+                        <div class="font-bold text-lg">The Complete JavaScript Course</div>
+                        <div class="text-[10px] mono text-white/30">UDEMY // APR 2025 - PRESENT</div>
+                    </div>
+                    <i data-lucide="code-2" class="text-white/20 group-hover:text-yellow-400"></i>
+                </div>
+                <div class="flex items-center justify-between p-4 bg-white/5 rounded group hover:bg-white/10 transition-colors">
+                    <div>
+                        <div class="font-bold text-lg">Ultimate MySQL Bootcamp</div>
+                        <div class="text-[10px] mono text-white/30">UDEMY // JAN - FEB 2025</div>
+                    </div>
+                    <i data-lucide="database" class="text-white/20 group-hover:text-purple-400"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="lab-pane col-span-12 md:col-span-5 p-10 bg-blue-500/5">
+            <div class="corner-br"></div>
+            <span class="tag-tech mb-6 text-white/30">Evaluation_Details</span>
+            <h4 class="text-xl font-bold mb-4">Certified Testing Specialist</h4>
+            <p class="text-sm text-white/50 leading-relaxed mb-6">
+                Completed 6 weeks of online certified training on Software Testing. Evaluation parameters included:
+            </p>
+            <ul class="space-y-3 mono text-[11px] text-blue-400/80">
+                <li>★ JAVA_BASICS_MASTERED</li>
+                <li>★ SELENIUM_COMMANDS_READY</li>
+                <li>★ LOCATOR_STRATEGIES_OPTIMIZED</li>
+                <li>★ FINAL_ASSESSMENT_SCORE: 87%</li>
+            </ul>
+        </section>
+
+        <footer class="col-span-12 py-20 text-center">
+            <div class="mb-8 h-px bg-white/10 w-full"></div>
+            <h2 class="text-4xl md:text-6xl font-black mb-8">INITIATE_CONTACT.</h2>
+            <a href="mailto:ansari.hamza7@gmail.com" class="px-12 py-4 bg-white text-black font-black uppercase text-sm tracking-[0.2em] rounded hover:bg-blue-500 hover:text-white transition-all inline-block">
+                Execute Handshake
+            </a>
+            <p class="mt-12 text-[10px] mono opacity-20 uppercase tracking-[1em]">Automated_Portfolio_v3.0_2026</p>
+        </footer>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
